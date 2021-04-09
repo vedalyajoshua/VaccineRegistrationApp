@@ -1,6 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.text.ParseException;
 
 public class RegistrationPanel extends JPanel{
     private RegistrationGUI frame;
@@ -91,10 +94,21 @@ public class RegistrationPanel extends JPanel{
         }
     }
 
-    private class enterButtonListener implements ActionListener {
+    private class enterButtonListener implements ActionListener { //make new instance of patient class using information entered in GUI
         public void actionPerformed(ActionEvent event) {
             if (event.getSource() == enterButton){
-                //make new instance of patient class using information entered in GUI
+                //parse input from GUI
+                String patientName = patientNameField.getText();
+                String patientZipCode = patientZipCodeField.getText();
+                String patientEmail = patientEmailField.getText();
+                String patientPhone = patientPhoneField.getText();
+                SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy");
+                //Date patientDOB = formatter.parse(patientDOBField.getText());
+                Double patientID = Math.random();
+
+                //creates new Patient instance using input
+                //Patient patientID = Patient(patientName, patientDOB, patientZipCode,
+                //        patientEmail, patientPhone);
             }
 
         }
