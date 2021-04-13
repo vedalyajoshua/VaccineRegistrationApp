@@ -8,13 +8,13 @@ public class RegistrationGUI extends JFrame {
     private RegistrationPanel regPanel;
     public RegistrationGUI() {
         super("COVID-19 Vaccine Registration");
-        Height = 400;
-        Width = 600;
+        //Height = 400; I dont think we need to set height/width since we are using pack() ?
+        //Width = 600;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        getContentPane().setPreferredSize(new Dimension(Width, Height));
-        pack();
-        regPanel = new RegistrationPanel(this);
+        //getContentPane().setPreferredSize(new Dimension(Width, Height)); same for this, i think pack() will handle that? 
+        RegistrationPanel regPanel = new RegistrationPanel(this);
         add(regPanel);
+        pack();
         setVisible(true);
     }
 
