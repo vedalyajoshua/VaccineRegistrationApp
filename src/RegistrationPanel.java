@@ -109,7 +109,10 @@ public class RegistrationPanel extends JPanel{
                 //creates new Patient instance using input
                 //Patient patientID = Patient(patientName, patientDOB, patientZipCode,
                 //        patientEmail, patientPhone);
+                
+                frame.eligibilityScreening(); //calling the method eligibilityScreening in order to change panels
             }
+           
 
         }
     }
